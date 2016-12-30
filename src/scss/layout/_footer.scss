@@ -1,0 +1,9 @@
+footer {
+	padding-top: em(45px);
+	padding-bottom: em(75px);
+	text-align: center;
+	
+	&-wrapper {
+		@include flex(center);
+	}
+}

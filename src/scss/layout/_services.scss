@@ -1,0 +1,50 @@
+.services {
+	padding-top: em(100px);
+	padding-bottom: em(100px);
+	text-align: center;
+
+	.row {
+		@include flex(space-around);
+		margin-top: em(75px);
+	}
+
+	&-item {
+		@include flex(center);
+		flex-direction: column;
+		align-items: center;
+		padding-right: em(15px);
+		padding-left: em(15px);
+	}
+
+	&-icon {
+		@include flex(center);
+		align-items: center;
+		width: 114px;
+		height: 114px;
+		border-radius: 50%;
+		background: linear-gradient(45deg, $electricViolet 15%, $shockingPink 50%, $rose 75%, $rose 100%);
+	}
+
+	h3.service-title {
+		margin-top: 35px;
+		margin-bottom: 20px;
+		font-size: em(25px);
+	}
+}
+
+// media queries
+
+@media (max-width: 51.2em) {
+
+	.services {
+		.row {
+			flex-direction: column;
+			margin-top: 0;
+		}
+		
+		&-item {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}

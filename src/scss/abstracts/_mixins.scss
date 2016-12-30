@@ -1,0 +1,48 @@
+// Flexbox 
+
+@mixin flex($position) {
+  display: flex;
+  justify-content: $position;
+}
+
+
+// Background
+
+@mixin bgImg($url, $position, $width) {
+	background: url($url), $position;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: $width;
+}
+
+// Buttons
+
+@mixin btn {
+	display: block;
+	width: 214px;
+	height: 68px;
+	font-size: em(18px);
+	font-weight: 700;
+	text-align: center;
+	color: $white;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	@include gradient();
+	transition: all 0.5s linear;
+	&:hover {
+		box-shadow: inset 214px 0 0 0 $rose;
+	}
+}
+
+// Transition
+
+@mixin basic-transition() { transition: all 0.4s ease-in-out; }
+
+
+// linear gradient
+
+@mixin gradient() {
+	background: linear-gradient(45deg, $electricViolet 45%, $shockingPink 60%, $rose 75%, $rose 100%);
+}
+

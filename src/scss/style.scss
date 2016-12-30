@@ -1,0 +1,26 @@
+// abstracts
+@import "abstracts/_variables.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_functions.scss";
+
+// base
+
+@import "base/_base.scss";
+
+//  layout 
+
+@import "layout/_navigation.scss";
+@import "layout/_page-intro.scss";
+@import "layout/_about.scss";
+@import "layout/_services.scss";
+@import "layout/_testimonials.scss";
+@import "layout/_portfolio.scss";
+@import "layout/_experience.scss";
+@import "layout/_blog.scss";
+@import "layout/_contact.scss";
+@import "layout/_footer.scss";
+
+// vendors
+
+@import "vendors/_normalize.scss";
+

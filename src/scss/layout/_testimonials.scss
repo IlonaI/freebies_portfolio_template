@@ -1,0 +1,131 @@
+.testimonials {
+	padding-top: em(100px);
+	padding-bottom: em(195px);
+	text-align: center;
+	color: $white;
+	@include bgImg('../img/testimonials-bg.jpg', center, 100%);
+
+	h2 {
+		margin-bottom: 72px;
+		color: $white;
+	}
+
+	&-item {
+		@include flex(center);
+		min-height: em(170px);
+	}
+
+	blockquote {
+		position: relative;
+		flex-basis: 600px;
+		// flex: 2.5;
+		margin-top: 0;
+		margin-right: 50px;
+		margin-left: 115px;
+		padding-right: 40px;
+		padding-left: 40px;
+		text-align: right;
+		&:before {
+			content: url('../img/left-qmark.png');
+			position: absolute;
+			top: -10px;
+			left: 0;
+
+		}
+		&:after {
+			content: url('../img/right-qmark.png');
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+
+		}
+	}
+
+	&-img {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
+	img {
+		border-radius: 50%;
+		border: 10px solid $white;
+	}
+
+	&-author {
+		align-self: center;
+		text-align: center;
+	}
+
+	cite {
+		font-size: em(25px);
+		font-style: normal;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	 span {
+	 	color: $elViolet;
+	 }
+}
+
+
+// media queries
+
+	@media (max-width: 71.333em) {
+
+		.testimonials {
+			blockquote {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+
+		&-img {
+			margin-right: 25px;
+			margin-left: 0;
+		}
+}
+
+@media (max-width: 51.2em) {
+
+	.testimonials {
+		padding-bottom: em(110px);
+
+		&-item {
+			flex-direction: column;
+			max-height: em(410px);
+		}
+
+		blockquote {
+			flex-basis: 120px;
+			text-align: center;
+			&:before {
+				top: -10px;
+				left: -10px;
+			}
+			&:after {
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		&-img {
+			margin-top: 60px;
+		}
+	}
+}
+
+@media (max-width: 24.333em) {
+
+	.testimonials {
+		padding-bottom: em(160px);
+
+		h2 {
+			font-size: em(37px);
+		}
+		
+		blockquote {
+			margin-top: em(60px);
+		}
+	}
+}

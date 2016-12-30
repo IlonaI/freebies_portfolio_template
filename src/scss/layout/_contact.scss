@@ -1,0 +1,115 @@
+.contact-form {
+	padding-top: em(70px);
+	padding-bottom: em(66px);
+	background-color: rgb(231,231,231);
+	background-image: url('../img/contact-map.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	.form-wrapper {
+		padding: em(75px) em(70px) em(90px) em(70px);
+		text-align: center;
+		background-color: $bigStone;
+	}
+
+	h2,
+	p {
+		color: $white;
+	}
+
+	form {
+		max-width: 970px;
+		margin: 0 auto;
+		padding-left: em(30px);
+		padding-right: em(30px);
+		div:first-child {
+			@include flex(center);	
+		}
+		div:last-child {
+			@include flex(center);
+			flex-direction: column;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		flex-basis: calc(100% / 3);
+		height: 50px;
+		margin-top: em(65px);
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	input:first-child { margin-left: 0; }
+
+	input:last-child { margin-right: 0; }
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		display: block;
+		margin-bottom: em(15px);
+		padding-left: 23px;
+	}
+
+	textarea {
+		height: 110px;
+		margin-top: em(15px);
+		padding-top: em(15px);
+	}
+
+	input[type="submit"] {
+		align-self: center;
+		margin-top: em(15px);
+	}
+}
+
+// media queries
+
+@media (max-width: 66.533em) {
+
+	.contact-form {
+		form {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: 62em) {
+
+	.contact-form {
+		input[type="text"],
+		input[type="email"] {
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 59.333em) {
+
+	.contact-form {
+		input[type="text"],
+		input[type="email"] {
+			margin-top: 5px;
+			margin-left: 0;
+		}
+
+		form {
+			margin-top: 30px;
+			div:first-child {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media (max-width: 36em) {
+	
+	.contact-form {
+		.form-wrapper {
+			padding: em(75px) em(30px) em(90px) em(30px);
+		}
+	}
+}
