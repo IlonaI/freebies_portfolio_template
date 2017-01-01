@@ -69,9 +69,13 @@ gulp.task('html', function() {
 	.pipe(htmlMin({
 		sortAttributes: true,
 		sortClassName: true
-		// collapseWhitespace: true
 	}))
 	.pipe(gulp.dest('dist/'));
+});
+
+gulp.task('fontawesome', function() {
+	return gulp.src('src/fonts/*.*')
+	.pipe(gulp.dest('dist/fonts'))
 });
 
 gulp.task('clean', function() {

@@ -104,12 +104,12 @@ $(document).ready(function() {
 			$galleryItem.addClass('hide');
 			setTimeout(function() {
 				$galleryItem.removeClass('hide');
-			}, 500);
+			}, 300);
 		} else {
 			$galleryItem.addClass('hide');
 			setTimeout(function() {
 				$('.' + $portfolioItem).removeClass('hide');
-			}, 500);
+			}, 300);
 		}
 
 	});
